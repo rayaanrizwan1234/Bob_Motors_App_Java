@@ -1,0 +1,47 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+*{
+
+	-fx-base: #ffffff;
+} .container{
+	-fx-text-align: center;
+	-fx-margin-top: 360px;
+}  #homebtn,#staffbtn,#inventorybtn,#billingsbtn,#emailbtn{
+  -fx-border-width: 0px 0px 2px 0px;
+   -fx-border-color: white;
+  -fx-background: none;
+  -fx-padding: 10px 20px;
+  -fx-font-size: 20px;
+  -fx-font-family: "montserrat";
+  -fx-cursor: pointer;
+  -fx-margin: 10px;
+  -fx-transition: 0.8s;
+  -fx-position: relative;
+  -fx-overflow: hidden;
+}
+#homebtn,#staffbtn,#inventorybtn,#billingsbtn,#emailbtn{
+  -fx-color:  #C139BD;
+}
+
+#homebtn:hover,#staffbtn:hover,#inventorybtn:hover,#billingsbtn:hover, #emailbtn:hover{
+  -fx-color: #D7A6D9;
+}
+
+#homebtn::before,#staffbtn::before,#inventorybtn::before,#billingsbtn::before,#emailbtn::before{
+  -fx-content: "";
+  -fx-position: absolute;
+  -fx-left: 0;
+  -fx-width: 100%;
+  -fx-height: 0%;
+  -fx-background: #3498db;
+  -fx-z-index: -1;
+  -fx-transition: 0.8s;
+}
+#homebtn::before,#staffbtn::before,#inventorybtn::before,#billingsbtn::before,#emailbtn::before{
+  -fx-top: 0;
+  -fx-border-radius: 0 0 50% 50%;
+}
+
+#homebtn:hover::before,#staffbtn:hover::before,#inventorybtn:hover::before,#billingsbtn:hover::before,#emailbtn:hover::before{
+  -fx-height: 180%;
+}

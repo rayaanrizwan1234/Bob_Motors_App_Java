@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1230.0" style="-fx-background-color: #454545;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.TableController">
+   <children>
+      <TableView fx:id="table" layoutX="619.0" layoutY="-2.0" prefHeight="650.0" prefWidth="582.0">
+        <columns>
+          <TableColumn fx:id="id" text="ID" />
+          <TableColumn fx:id="staff" prefWidth="150.0" text="Staff Name" />
+            <TableColumn fx:id="department" prefWidth="150.0" text="Department" />
+            <TableColumn fx:id="cars" prefWidth="100.0" text="Cars Sold" />
+            <TableColumn fx:id="salary" prefWidth="105.0" text="Salary" />
+        </columns>
+      </TableView>
+      <Label layoutX="249.0" layoutY="14.0" text="Employee form" textFill="WHITE">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtStaffName" layoutX="189.0" layoutY="105.0" prefHeight="27.0" prefWidth="282.0" promptText="Enter Staff Name" style="-fx-background-color: #999999; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #C139BD;" />
+      <Button layoutX="274.0" layoutY="325.0" mnemonicParsing="false" onAction="#addEmployee" style="-fx-background-color: transparent; -fx-border-color: #C139BD; -fx-border-radius: 1em;" text="Add Employee" textFill="WHITE" />
+      <Button layoutX="76.0" layoutY="325.0" mnemonicParsing="false" onAction="#cleardata" style="-fx-background-color: transparent; -fx-border-color: #C139BD; -fx-border-radius: 1em;" text="Clear Fields" textFill="WHITE" />
+      <TextField fx:id="txtID" layoutX="189.0" layoutY="56.0" prefHeight="27.0" prefWidth="282.0" promptText="Enter ID" style="-fx-background-color: #999999; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #C139BD;" />
+      <TextField fx:id="txtSalary" layoutX="189.0" layoutY="267.0" prefHeight="27.0" prefWidth="282.0" promptText="Enter Salary" style="-fx-background-color: #999999; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #C139BD;" />
+      <TextField fx:id="txtCarsSold" layoutX="189.0" layoutY="211.0" prefHeight="27.0" prefWidth="282.0" promptText="Enter Cars Sold" style="-fx-background-color: #999999; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #C139BD;" />
+      <TextField fx:id="txtDepartment" layoutX="189.0" layoutY="161.0" prefHeight="27.0" prefWidth="282.0" promptText="Enter Department " style="-fx-background-color: #999999; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: #C139BD;" />
+      <Label fx:id="lblID" layoutX="200.0" layoutY="88.0" />
+      <Label fx:id="lblStaffName" layoutX="200.0" layoutY="144.0" />
+      <Label fx:id="lblDepartment" layoutX="200.0" layoutY="194.0" />
+      <Label fx:id="lblCarsSold" layoutX="200.0" layoutY="250.0" />
+      <Label fx:id="lblSalary" layoutX="200.0" layoutY="300.0" />
+      <Button layoutX="414.0" layoutY="325.0" mnemonicParsing="false" onAction="#Edit" style="-fx-background-color: transparent; -fx-border-color: #C139BD; -fx-background-radius: 1em; -fx-border-radius: 1em;" text="Update" textFill="WHITE" />
+      <BarChart fx:id="chart" layoutX="80.0" layoutY="362.0" legendVisible="false" prefHeight="326.0" prefWidth="483.0" title="Employee vs Cars Sold ">
+        <xAxis>
+          <CategoryAxis label="Employee Name " side="BOTTOM" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="Number Of Cars Sold" side="LEFT" />
+        </yAxis>
+      </BarChart>
+      <Button layoutX="94.0" layoutY="362.0" mnemonicParsing="false" onAction="#loadChart" style="-fx-background-color: transparent; -fx-border-color: #C139BD; -fx-border-radius: 1em;" text="Load" textFill="WHITE" />
+      <Button layoutX="619.0" layoutY="661.0" mnemonicParsing="false" onAction="#pdfButton" prefHeight="25.0" prefWidth="582.0" style="-fx-background-color: #C139BD; -fx-background-radius: 1em;" text="Generate PDF" />
+      <Button layoutX="189.0" layoutY="325.0" mnemonicParsing="false" onAction="#Delete" style="-fx-background-color: transparent; -fx-border-color: #C139BD; -fx-background-radius: 1em; -fx-border-radius: 1em;" text="Delete" textFill="WHITE" />
+   </children>
+</Pane>

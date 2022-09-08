@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1235.0" style="-fx-background-color: #454545;" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.InventoryController">
+   <children>
+      <TableView fx:id="table" layoutX="19.0" layoutY="70.0" prefHeight="621.0" prefWidth="1200.0" style="-fx-background-color: #999999;">
+        <columns>
+            <TableColumn fx:id="id" prefWidth="100.0" text="Registration ID" />
+          <TableColumn fx:id="price" prefWidth="133.3" text="Price Per Day" />
+            <TableColumn fx:id="category" prefWidth="133.3" text="Condition" />
+            <TableColumn fx:id="type" prefWidth="133.3" text="Type" />
+            <TableColumn fx:id="make" prefWidth="133.3" text="Make" />
+            <TableColumn fx:id="details" prefWidth="300.0" text="Car Details" />
+            <TableColumn fx:id="stock" prefWidth="133.3" text="Stock" />
+            <TableColumn fx:id="button" prefWidth="133.3" text="Select" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtRegistrationID" layoutX="14.0" layoutY="8.0" prefHeight="25.0" prefWidth="76.0" promptText="Registration ID" style="-fx-background-color: #999999; -fx-border-color: #C139BD; -fx-border-width: 0px 0px 2px 0px;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtPrice" layoutX="157.0" layoutY="8.0" prefHeight="25.0" prefWidth="76.0" promptText="Price" style="-fx-background-color: #999999; -fx-border-color: #C139BD; -fx-border-width: 0px 0px 2px 0px;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtCategory" layoutX="329.0" layoutY="8.0" prefHeight="25.0" prefWidth="76.0" promptText="Condition" style="-fx-background-color: #999999; -fx-border-color: #C139BD; -fx-border-width: 0px 0px 2px 0px;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtType" layoutX="517.0" layoutY="8.0" prefHeight="25.0" prefWidth="76.0" promptText="Type" style="-fx-background-color: #999999; -fx-border-color: #C139BD; -fx-border-width: 0px 0px 2px 0px;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtMake" layoutX="700.0" layoutY="8.0" prefHeight="25.0" prefWidth="76.0" promptText="Make" style="-fx-background-color: #999999; -fx-border-color: #C139BD; -fx-border-width: 0px 0px 2px 0px;" />
+      <TextField fx:id="txtDetails" layoutX="886.0" layoutY="8.0" prefHeight="25.0" prefWidth="76.0" promptText="Car details" style="-fx-background-color: #999999; -fx-border-color: #C139BD; -fx-border-width: 0px 0px 2px 0px;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <TextField fx:id="txtStock" layoutX="1080.0" layoutY="8.0" prefHeight="25.0" prefWidth="76.0" promptText="Stock" style="-fx-background-color: #999999; -fx-border-color: #C139BD; -fx-border-width: 0px 0px 2px 0px;">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></TextField>
+      <Button layoutX="796.0" layoutY="42.0" mnemonicParsing="false" onAction="#cleardata" style="-fx-background-color: transparent; -fx-border-color: #C139BD; -fx-border-radius: 1em;" text="CLear Data" textFill="WHITE" />
+      <TextField fx:id="filter" layoutX="449.0" layoutY="43.0" prefHeight="25.0" prefWidth="339.0" promptText="Filter By Make or ID" />
+      <Button layoutX="329.0" layoutY="42.0" mnemonicParsing="false" onAction="#enquire" prefHeight="27.0" prefWidth="76.0" style="-fx-background-color: transparent; -fx-border-color: #C139BD; -fx-border-radius: 1em;" text="Enquire" textFill="WHITE" />
+   </children>
+</Pane>

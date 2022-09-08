@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1326.0" style="-fx-background-color: 454545;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.ManagerController">
+   <left>
+      <VBox fx:id="vb" prefHeight="400.0" prefWidth="136.0" style="-fx-background-color: #AB4642;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="homebtn" mnemonicParsing="false" onAction="#loadPage5" prefHeight="140.0" prefWidth="136.0" text="Home" />
+            <Button fx:id="staffbtn" mnemonicParsing="false" onAction="#loadPage1" prefHeight="140.0" prefWidth="136.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-font-size: 15px;" text="Staff" />
+            <Button fx:id="emailbtn" mnemonicParsing="false" onAction="#loadPage6" prefHeight="140.0" prefWidth="136.0" text="Email" />
+            <Button fx:id="inventorybtn" mnemonicParsing="false" onAction="#loadPage2" prefHeight="140.0" prefWidth="139.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-font-size: 15px;" text="Inventory" />
+            <Button fx:id="billingsbtn" mnemonicParsing="false" onAction="#loadPage3" prefHeight="140.0" prefWidth="136.0" style="-fx-border-color: white; -fx-border-width: 0px 0px 2px 0px; -fx-font-size: 15px;" text="Billings" />
+         </children>
+      </VBox>
+   </left>
+   <center>
+      <AnchorPane fx:id="ap" prefHeight="700.0" prefWidth="1200.0" style="-fx-background-color: #454545;" BorderPane.alignment="CENTER">
+         <children>
+            <Text fill="WHITE" layoutX="527.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Home page " textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Bold" size="36.0" />
+               </font></Text>
+            <Text fill="#fcf9f9" layoutX="468.0" layoutY="94.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the database of Bob Motors">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="242.0" fitWidth="1164.0" layoutX="160.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../Desktop/CS%20IA/Screenshot%20(56)%20copy.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="148.0" layoutY="443.0" text="In the words of our founder, Henry Ford, “To do more for the world than the world does for you. That is success.”" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="72.0" layoutY="494.0" text="Throughout our 117-year history and today, we strive to do more through our products, our services and by supporting the communities" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="214.0" layoutY="546.0" text="where we operate globally. We are proud of our contributions – yesterday, today and tomorrow." textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+   </center>
+</BorderPane>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1230.0" style="-fx-background-color: #454545;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Manager.BillingController">
+   <children>
+      <Label layoutX="586.0" layoutY="14.0" text="Billing Form" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="81.0" text="Employee:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="staffCombo" layoutX="133.0" layoutY="82.0" prefWidth="150.0" style="-fx-background-color: #999999; -fx-background-radius: 1em;" />
+      <Label layoutX="21.0" layoutY="284.0" text="Select Product" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="invTable" layoutX="28.0" layoutY="318.0" prefHeight="350.0" prefWidth="300.0">
+        <columns>
+          <TableColumn fx:id="id" prefWidth="100.0" text="Registration ID" />
+          <TableColumn fx:id="details" prefWidth="200.0" text="Details" />
+        </columns>
+      </TableView>
+      <TextField fx:id="filter" layoutX="157.0" layoutY="285.0" promptText="Filter ID" />
+      <Label layoutX="434.0" layoutY="81.0" text="Selected Car ID" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtId" layoutX="580.0" layoutY="82.0" prefHeight="35.0" prefWidth="203.0" />
+      <Label layoutX="397.0" layoutY="183.0" text="Selected Car Details" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDetails" layoutX="580.0" layoutY="179.0" prefHeight="122.0" prefWidth="203.0" />
+      <Button layoutX="968.0" layoutY="82.0" mnemonicParsing="false" onAction="#pdf" prefHeight="35.0" prefWidth="203.0" style="-fx-background-color: #999999; -fx-background-radius: 1em;" text="Generate Bill" />
+      <Label layoutX="85.0" layoutY="128.0" style="-fx-border-color: #C3E2E4; -fx-border-width: 0px 0px 2px 0px;" text="Client Information" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtClient" layoutX="83.0" layoutY="171.0" promptText="Full Name" />
+      <Label layoutX="481.0" layoutY="391.0" text="Duration:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtDuration" layoutX="580.0" layoutY="392.0" prefHeight="25.0" prefWidth="203.0" promptText="e.g 24 (in days)" />
+      <DatePicker fx:id="datePicker" layoutX="580.0" layoutY="338.0" prefHeight="25.0" prefWidth="203.0" promptText="Select Start Date" />
+      <Label layoutX="470.0" layoutY="337.0" text="Start Date:" textFill="WHITE">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtPhone" layoutX="83.0" layoutY="198.0" promptText="Phone Number" />
+      <TextField fx:id="txtPassport" layoutX="83.0" layoutY="228.0" promptText="Passport Number" />
+      <Button layoutX="580.0" layoutY="590.0" mnemonicParsing="false" onAction="#clearData" prefHeight="35.0" prefWidth="203.0" style="-fx-background-color: #999999; -fx-background-radius: 1em;" text="Clear Data" />
+      <PieChart fx:id="pie" layoutX="793.0" layoutY="285.0" prefHeight="315.0" prefWidth="386.0" />
+   </children>
+</Pane>
